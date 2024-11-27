@@ -8,6 +8,8 @@ import java.util.Scanner;
 
 public class ATMSimulation extends Application {
 
+    // TODO reorganize methods, rename variables and make sure code works properly
+
     @Override
     public void start(Stage stage) throws Exception {
         
@@ -33,6 +35,16 @@ public class ATMSimulation extends Application {
 
     public class User {
         Short userPinInfo;
+
+        // Method to handle the login process
+        private static boolean login(String pin) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Enter PIN: ");
+            String enteredPin = scanner.nextLine();
+            return enteredPin.equals(pin);
+        }
+
+
 
         //getPinInfo():
         //changePin():
